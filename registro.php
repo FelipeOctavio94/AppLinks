@@ -17,7 +17,7 @@
         <div class="col l4 m4 s12">
             <h3 class="center">App links </h3>
             <h5 class="center">Guarda tus paginas web</h5>
-
+            
             <form action="controllers/RegistroController.php" method="POST">
                 <div class="input-field">
                     <input id="email" type="email" name="email">
@@ -38,6 +38,27 @@
                         <a href="index.php">Volver</a>
                 </p>
             </form>
+            <p class="red-text">
+                    <?php 
+                    session_start();
+                    if(isset($_SESSION['error'])) {
+                        echo $_SESSION['error'];
+                        unset($_SESSION['error']);
+                    
+                    }
+                    ?>
+                </p>
+
+                <p class="green-text">
+                    <?php 
+                    
+                    if(isset($_SESSION['respuesta'])) {
+                        echo $_SESSION['respuesta'];
+                        unset($_SESSION['respuesta']);
+                    
+                    }
+                    ?>
+                </p>
         </div>
     </div>
         
