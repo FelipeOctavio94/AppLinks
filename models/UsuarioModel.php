@@ -6,11 +6,11 @@ require_once("Conexion.php");
 
 class UsuarioModel{
 
-    public function insertarUsuario($data){ //$data: [email=>valor,nombre=>valor,clave=valor]
+    public function insertarUsuario($data){ 
         $stm = Conexion::conector()->prepare("INSERT INTO usuario VALUES(:A,:B,:C)");
         $stm->bindParam(":A",$data['email']);
         $stm->bindParam(":B",$data['nombre']);
-        $stm->bindParam(":C",md5($data['clave']));//md5 encripta la clave y se ve así: 4jy5bo39b2...
+        $stm->bindParam(":C",md5($data['clave']));
         return $stm->execute();
     }
 

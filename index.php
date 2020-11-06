@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body class="#cfd8dc blue-grey lighten-4">
     
     <div class="container">
         <div class="row">
@@ -38,7 +38,7 @@
                     <input id="clave" type="password" name="clave">
                     <label for="clave">Ingrese su clave</label>
                 </div>
-                <button class="btn black boton">Iniciar sesion</button>
+                <button class="btn black ancho-100">Iniciar sesion</button>
                 <p class="center">
                     <a href="registro.php">Registrate aquí</a>
                 </p>    

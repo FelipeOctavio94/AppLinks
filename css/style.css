@@ -1,3 +1,7 @@
+.ancho-100{
+    width: 100%;
+}
+
 .input-field input:focus + label{
     color: #000 !important;
 }
